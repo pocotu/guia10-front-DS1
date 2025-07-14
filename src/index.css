@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -11,26 +15,6 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
-  /* Radium & Dark Palette */
-  --radium-dark-black: #010101;
-  --radium-dark-navy: #010741;
-  --radium-dark-blue-grey: #46798E;
-  --radium-dark-mint: #44BB91;
-  --radium-dark-lime: #E3FBA7;
-
-  /* Override Bootstrap colors */
-  --bs-primary: var(--radium-dark-navy);
-  --bs-secondary: var(--radium-dark-blue-grey);
-  --bs-success: var(--radium-dark-mint);
-  --bs-info: var(--radium-dark-lime);
-  --bs-warning: #ffc107; /* Keeping a standard warning color */
-  --bs-danger: #dc3545; /* Keeping a standard danger color */
-  --bs-dark: var(--radium-dark-black);
-  --bs-light: #f8f9fa; /* A very light grey for subtle backgrounds */
-
-  --bs-body-bg: #ffffff; /* White background as seen in palette image */
-  --bs-body-color: var(--radium-dark-black);
 }
 
 a {
@@ -45,12 +29,9 @@ a:hover {
 body {
   margin: 0;
   display: flex;
-  flex-direction: column;
+  place-items: center;
   min-width: 320px;
   min-height: 100vh;
-  font-family: 'Roboto', sans-serif; /* Fuente más moderna, puedes cambiarla */
-  background-color: var(--bs-body-bg);
-  color: var(--bs-body-color);
 }
 
 h1 {
@@ -88,160 +69,4 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
-}
-
-.card {
-  padding: 2em;
-  border-radius: 0.75rem;
-  border: none; /* Remove default Bootstrap border */
-  overflow: hidden;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.08) !important;
-}
-
-.card-header {
-  border-bottom: none;
-  border-top-left-radius: 0.75rem;
-  border-top-right-radius: 0.75rem;
-}
-
-.btn {
-  border-radius: 0.5rem;
-  font-weight: 600;
-}
-
-.btn-primary {
-  background-color: var(--bs-primary);
-  border-color: var(--bs-primary);
-}
-
-.btn-primary:hover {
-  background-color: #000535; /* Darker shade of --radium-dark-navy (#010741) */
-  border-color: #000535;
-}
-
-.btn-outline-primary {
-  color: var(--bs-primary);
-  border-color: var(--bs-primary);
-}
-
-.btn-outline-primary:hover {
-  background-color: var(--bs-primary);
-  color: #fff;
-}
-
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
-#root {
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-/* General component styling refinements */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: var(--bs-dark);
-}
-
-/* Specific Home Page adjustments for better visual hierarchy */
-.home-page .jumbotron {
-  background-color: var(--bs-body-bg) !important;
-  border: 1px solid rgba(0, 0, 0, 0.05);
-}
-
-.home-page .jumbotron h1 {
-  color: var(--bs-dark);
-  font-weight: 700;
-}
-
-.home-page .jumbotron p.lead {
-  color: var(--bs-secondary);
-}
-
-.home-page .card-body i {
-  margin-bottom: 0.75rem;
-}
-
-.home-page .card-text {
-  color: var(--bs-secondary);
-}
-
-.home-page .btn-light {
-  background-color: var(--bs-light);
-  color: var(--bs-dark);
-  border-color: var(--bs-light);
-}
-
-.home-page .btn-light:hover {
-  background-color: var(--radium-dark-lime);
-  border-color: var(--radium-dark-lime);
-  color: var(--bs-dark);
-}
-
-/* Dashboard Page specific adjustments */
-.dashboard-page .card-header.bg-primary {
-  background-color: var(--bs-primary) !important;
-}
-
-.dashboard-page .card-header.bg-success {
-  background-color: var(--bs-success) !important;
-}
-
-.dashboard-page .card-header.bg-info {
-  background-color: var(--bs-info) !important;
-}
-
-.dashboard-page .card-header.bg-dark {
-  background-color: var(--bs-dark) !important;
-}
-
-.dashboard-page .card-header.bg-secondary {
-  background-color: var(--bs-secondary) !important;
-}
-
-.dashboard-page .card.border-primary {
-  border-color: var(--bs-primary) !important;
-}
-
-.dashboard-page .card.border-success {
-  border-color: var(--bs-success) !important;
-}
-
-.dashboard-page .card.border-info {
-  border-color: var(--bs-info) !important;
-}
-
-.dashboard-page .card.border-dark {
-  border-color: var(--bs-dark) !important;
-}
-
-.dashboard-page .card.border-secondary {
-  border-color: var(--bs-secondary) !important;
-}
-
-.dashboard-page .card.border-warning {
-  border-color: var(--bs-warning) !important;
-}
-
-.dashboard-page .badge.bg-success {
-  background-color: var(--bs-success) !important;
-}
-
-.dashboard-page .badge.bg-warning {
-  background-color: var(--bs-warning) !important;
-  color: #212529 !important; /* Ensure dark text on warning badge */
-}
-
-.dashboard-page .badge.bg-danger {
-  background-color: var(--bs-danger) !important;
 }
